@@ -14,29 +14,47 @@
 
 
 <style>
-  
+  html{
+    width: 1440px;
+  }
   body {
     background-color: #8A6554;
     text-align: center;
     margin: 0 auto;
     color: white;
     font-family: "Kantumruy Pro", serif;
-    font-weight: 100px
+    font-weight: 100px;
+    width: 1200px;
   }
+  
+  
   
   h2{
   color: white;
   font-family: "Lora", serif;
-  margin-top: 150px;
-  font-weight: 400px;
+  text-align: center;
+  font-weight: 600;
   }
   
+  
+
   h3{
-  font-family: "Kantumruy Pro";
-  font-size: 50px;
+  font-family: "Kantumruy Pro", serif;
+  font-size: 40px;
   text-align: right;
   padding-right: 30px;
+  font-weight: 400;
   }
+  
+  video {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  display: block;
+
+}
   
   .home-page-grid{
     display: grid;
@@ -55,31 +73,54 @@
     text-align: center;
   }
   
+  .books-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+    justify-items: center; 
+  }
+  
+  .book-pair {
+    display: flex;
+    align-items: stretch;
+    gap: 0px;
+  }
+  
+  .book-cover {
+    height: 200px;
+    width: 100;
+    border: none;
+  }
+  .white-rectangle {
+    background-color: white;
+    width: 100px;         
+    height: 170px;   
+    padding: 15px;
+    color: black;
+    display: flex;
+    align-items: center;   
+    text-align: center;
+  }
+    
+    
   #section0 img:hover{
     transform: rotate(-10deg) scale(1.15);
   }
   
   
-  #section0, #section1, #section2, #section3, #section4 {
-  height: 700px;  
-  }
+  
   
   #section0 {
+    height: 700px;
     background-color: #8A6554;
   }
-  #section1 {
-    background-color: #705244;
-  }
-  #section2 {
-    background-color: #6e4f42;
-  }
-    #section3 {
-    background-color: #694b3f;
-  }
-    #section4 {
-    background-color: #61453a;
-  }
   
+   #section1, #section2, #section3, #section4 {
+    padding: 20px 20px;
+    border-bottom: 2px solid #eee; /* Optional divider line */
+    background-color: #705244;
+    max-height: 1000px;
+  }
 </style>
   </head>
   
@@ -96,7 +137,7 @@
    <div class="home-page-grid">
     <div class="grid-item">
     <!--replace the book picture for better resolution --->
-   <img src="228 final book_preview.png", height="140" alt="pink striped notebook">
+   <img src="228 final book_preview.png", height="160" alt="pink striped notebook">
       <p class="captions">
         Reading<br>
         💎200
@@ -104,7 +145,7 @@
   </div>
   
    <div class="grid-item">
-     <img src="228_final_ribbon-removebg-preview (1).png", height=160px alt="pink ribbon">
+     <img src="228_final_ribbon-removebg-preview (1).png", height=180px alt="pink ribbon">
       <p class="captions">
         About me<br>
         💎100
@@ -112,7 +153,7 @@
   </div>
    
    <div class="grid-item">
-      <img src="dango-removebg-preview.png", alt="illustration of dango on a stick", height= 150px, transform= rotate(15deg);>
+      <img src="dango-removebg-preview.png", alt="illustration of dango on a stick", height= 180px, transform= rotate(15deg);>
       <p class="captions">
         Baking<br>
         💎200
@@ -120,14 +161,14 @@
     </div>
     
   <div class="grid-item">
-      <img src="228_final_rabbit-removebg-preview.png", height= 160px, alt="drawing of rabbit in purple">
+      <img src="228_final_rabbit-removebg-preview.png", height= 190px, alt="drawing of rabbit in purple">
      <p class="captions">
         (Just a cute<br> bunny here)
       </p>
   </div>
     
   <div class="grid-item">
-      <img src="228_final_Matcha-removebg-preview.png", height =160 alt="Matcha in a pink mug">
+      <img src="228_final_Matcha-removebg-preview.png", height =200 alt="Matcha in a pink mug">
      <p class="captions">
         Drink Collection<br>
         💎200
@@ -135,11 +176,12 @@
   </div>
   
   <div class="grid-item">
-      <img src="228_final_star-removebg-preview.png", height= 160 alt="purple embroided star">
+      <img src="228_final_star-removebg-preview.png", height= 200 alt="purple embroided star">
       <p class="captions">
         Snapshots<br>
         💎200
       </p>
+  
   </div>
     
   </div>
@@ -147,10 +189,15 @@
   
   
    <div id="section1">
-    
-     <h3>
-       <img src="228_final_ribbon-removebg-preview (1).png", height=130px alt="pink ribbon" style="vertical-align: middle; margin-right: 10px;"> About me
-     </h3> 
+    <h2>
+      Scroll to explore 
+     </h2>
+     
+    <h3>
+      <img src="228_final_ribbon-removebg-preview (1).png", height=130 alt="pink ribbon" style="vertical-align: middle; margin-right: 10px;"> About me 
+     </h3>
+     
+     
   <video width="100%" height="auto" controls>
     <source src="pinterest-video-75.mp4" type="video/mp4">
   </video>
@@ -162,8 +209,39 @@
   
   
 <div id="section2">
-Your amazing content goes here!
+
+        <h3>
+          <img src="228 final book_preview.png", height="140" alt="pink striped notebook"  style="vertical-align: middle; margin-right: 10px; transform: rotate(-15deg);"> Books I enjoy
+  </h3>
+       
+  <div class="books-grid">
+  <div class="book-pair">
+    <img src="how to know a person.jpg" alt="How to know a person" class="book-cover">
+    <div class="white-rectangle">
+      The book provided insight into the process of getting to know someone…
+    </div>
+  </div>
+
+  <div class="book-pair">
+    <img src="the silent patient.jpg" alt="The Silent Patient" class="book-cover">
+    <div class="white-rectangle">
+      A fascinating psychological thriller centered around a silent patient.
+    </div>
+  </div>
+
+  <div class="book-pair">
+    <img src="everything everything.jpg" alt="Everything Everything" class="book-cover">
+    <div class="white-rectangle">
+      A story about a girl allergic to the world who discovers love and courage.
+    </div>
+  </div>
+
+  <div class="book-pair">
+    <div class="white-rectangle">My next read</div>
+    <img src="the wedding people.jpg" alt="The Wedding People" class="book-cover">
+  </div>
 </div>
+  
 <div id="section3">
 Your amazing content goes here!
 </div>
