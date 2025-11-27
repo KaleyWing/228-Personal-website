@@ -42,7 +42,7 @@
   font-family: "Kantumruy Pro", serif;
   font-size: 40px;
   text-align: right;
-  padding-right: 30px;
+  padding-right: 10px;
   font-weight: 400;
   }
   
@@ -83,31 +83,68 @@
   .book-pair {
     display: flex;
     align-items: stretch;
-    gap: 0px;
+    gap: 0px; 
   }
   
   .book-cover {
-    height: 200px;
+    height: 250px;
     width: 100;
     border: none;
   }
   .white-rectangle {
     background-color: white;
-    width: 100px;         
-    height: 170px;   
+    width: 150px;         
+    height: 220px;   
     padding: 15px;
     color: black;
     display: flex;
     align-items: center;   
+    text-align: left;
+    font-size: 13px;
+  }
+  
+
+ .rect-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* two equal columns */
+    gap: 10px 40px;
+    justify-items: center;
+    padding: 10px;
+  }
+
+  .gray-rect {
+    background-color: white;
+    width: 350px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  
+  .text-box {
+    width: 350px;
+    min-height: 60px;
+    margin-top: 10px;      
+    padding: 5px;
+    color: white;
+    font-size: 20px;
     text-align: center;
   }
-    
-    
+  
+  .baking-hero {
+     width: 950px;
+     height: 350px;
+     background-color: white;
+     margin: 30px auto;
+     align-items: center;
+        }
+  
+  
+  
   #section0 img:hover{
     transform: rotate(-10deg) scale(1.15);
   }
-  
-  
   
   
   #section0 {
@@ -116,7 +153,7 @@
   }
   
    #section1, #section2, #section3, #section4 {
-    padding: 20px 20px;
+    padding: 20px 10px;
     border-bottom: 2px solid #eee; /* Optional divider line */
     background-color: #705244;
     max-height: 1000px;
@@ -218,21 +255,29 @@
   <div class="book-pair">
     <img src="how to know a person.jpg" alt="How to know a person" class="book-cover">
     <div class="white-rectangle">
-      The book provided insight into the process of getting to know someone…
+      The book provided insight into the process of getting to know someone. A process where most people think is intuitive but end up doing it wrong. 
+      <br>
+      This book made me reflect on how I built and kindle my relationships, and made me a better listener and deepen my emotional bond with people around me.
     </div>
   </div>
 
   <div class="book-pair">
     <img src="the silent patient.jpg" alt="The Silent Patient" class="book-cover">
     <div class="white-rectangle">
-      A fascinating psychological thriller centered around a silent patient.
-    </div>
+      Amazing psychological thriller centered around a psychologist and a patient that refuses to speak.
+    <br>
+      As someone that has read (and predicted) countless ending of thrillers, this one really caught me off guard!!!
+<br>
+      I would recommend this book to people that dont normally read thrillers when they want to get started.
   </div>
+    </div>
 
   <div class="book-pair">
     <img src="everything everything.jpg" alt="Everything Everything" class="book-cover">
     <div class="white-rectangle">
-      A story about a girl allergic to the world who discovers love and courage.
+      The story of a girl that is allergic to the world. She lives in a small plastic shielded house with her mother and nurse. However, one day, a boy moves in next door, and her life changed. <br>
+
+    This book was fun to read and easy to follow along.Its a good book to get out of a reading slump!  
     </div>
   </div>
 
@@ -243,10 +288,47 @@
 </div>
   
 <div id="section3">
-Your amazing content goes here!
+<h3>
+  <img src="dango-removebg-preview.png" alt="dango" 
+       style="width: 100px; height: 150px; object-fit: cover; object-position: center; vertical-align: middle"> Baking
+  </h3>
+  </div>
 </div>
+  
 <div id="section4">
-Your amazing content goes here!
+  
+  <div class="rect-grid">
+  <div class="gray-rect">Baking item 1</div>
+ 
+    
+  <div class="gray-rect">Baking item 2</div>
+    
+  <div class="text-box">
+    My favorite snack to bake!<br>
+    it requires so little effort and ingredients
+    </div>
+  <div class="text-box">
+    I love everything chewy! 
+    <br>
+    I dont make this often because none of my family likes mochi:(
+    </div>
 </div>
-</body>
+  
+  <div class="baking-hero">  </div>
+    <p style="font-size: 22px; max-width: 975px; margin: 0 auto; text-align: center;">
+     I am a HUGE bread lover. I can eat bread three times a day. <br>We have a mixer at home so this is relatively easy to make!
+  </p>
+  
+</div>
+  
+  
+  
+<div id="section5">
+  <h3>
+    <img src="228_final_Matcha-removebg-preview.png", height ="150" alt="Matcha in a pink mug" style="vertical-align: middle;">
+    Drink Collection
+  </h3>
+  your amazing content goes here!
+  </div>
+  </body>
 </html>
