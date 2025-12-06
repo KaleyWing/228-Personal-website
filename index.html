@@ -1,334 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title>My Cozy Corner</title>
-  
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-  
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+  <style>
+    html {
+      width: 1440px; }
+
+    body {
+      background-color: #8A6554;
+      text-align: center;
+      margin: 0 auto;
+      color: white;
+      font-family: "Kantumruy Pro", serif;
+      width: 1200px;
+    }
 
 
-<style>
-  html{
-    width: 1440px;
-  }
-  body {
-    background-color: #8A6554;
-    text-align: center;
-    margin: 0 auto;
-    color: white;
-    font-family: "Kantumruy Pro", serif;
-    font-weight: 100px;
-    width: 1200px;
-  }
-  
-  
-  
-  h2{
-  color: white;
-  font-family: "Lora", serif;
-  text-align: center;
-  font-weight: 600;
-  }
-  
-  
+    h2 {
+      color: white;
+      font-family: "Lora", serif;
+      text-align: center;
+      font-weight: 600;
+    }
 
-  h3{
-  font-family: "Kantumruy Pro", serif;
-  font-size: 40px;
-  text-align: right;
-  padding-right: 10px;
-  font-weight: 400;
-  }
-  
-  video {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  object-position: center;
-  overflow: hidden;
-  display: block;
+    h3 {
+      font-family: "Kantumruy Pro", serif;
+      font-size: 40px;
+      text-align: right;
+      padding-right: 10px;
+      font-weight: 400;
+    }
 
-}
-  
-  .home-page-grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    grid-gap: 50px;
-    padding: 80px;
-  }
-  
-  .grid-item{
-    text-align: center;
-  }
-  
-  .captions{
-    font-family: "Lora";
-    text-align: center;
-  }
-  
-  .books-grid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 40px;
-    justify-items: center; 
-  }
-  
-  .book-pair {
-    display: flex;
-    align-items: stretch;
-    gap: 0px; 
-  }
-  
-  .book-cover {
-    height: 250px;
-    width: 100;
-    border: none;
-  }
-  .white-rectangle {
-    background-color: white;
-    width: 150px;         
-    height: 220px;   
-    padding: 15px;
-    color: black;
-    display: flex;
-    align-items: center;   
-    text-align: left;
-    font-size: 13px;
-  }
-  
+    video {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      object-position: center;
+      overflow: hidden;
+      display: block;
+    }
 
- .rect-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* two equal columns */
-    gap: 10px 40px;
-    justify-items: center;
-    padding: 10px;
-  }
+    .home-page-grid,
+    .books-grid,
+    .rect-grid,
+    .photo-grid-outline {
+      max-width: 950px;
+      margin: 0 auto;
+    }
 
-  .gray-rect {
-    background-color: white;
-    width: 350px;
-    height: 220px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-  }
-  
-  .text-box {
-    width: 350px;
-    min-height: 60px;
-    margin-top: 10px;      
-    padding: 5px;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-  }
-  
-  .baking-hero {
-     width: 950px;
-     height: 350px;
-     background-color: white;
-     margin: 30px auto;
-     align-items: center;
-        }
-  
-  
-  
-  #section0 img:hover{
-    transform: rotate(-10deg) scale(1.15);
-  }
-  
-  
-  #section0 {
-    height: 700px;
-    background-color: #8A6554;
-  }
-  
-   #section1, #section2, #section3, #section4 {
-    padding: 20px 10px;
-    border-bottom: 2px solid #eee; /* Optional divider line */
-    background-color: #705244;
-    max-height: 1000px;
-  }
-</style>
-  </head>
-  
-<body>
-<a href="#section1">0</a>
-<a href="#section1">1</a>
-<a href="#section1">2</a>
-<a href="#section1">3</a>
-<a href="#section1">4</a> 
-  
-<h2>Welcome to my cozy corner!</h2>
-  
-<div id="section0">
-   <div class="home-page-grid">
-    <div class="grid-item">
-    <!--replace the book picture for better resolution --->
-   <img src="228 final book_preview.png", height="160" alt="pink striped notebook">
-      <p class="captions">
-        Reading<br>
-        💎200
-      </p>
-  </div>
-  
-   <div class="grid-item">
-     <img src="228_final_ribbon-removebg-preview (1).png", height=180px alt="pink ribbon">
-      <p class="captions">
-        About me<br>
-        💎100
-      </p>
-  </div>
-   
-   <div class="grid-item">
-      <img src="dango-removebg-preview.png", alt="illustration of dango on a stick", height= 180px, transform= rotate(15deg);>
-      <p class="captions">
-        Baking<br>
-        💎200
-      </p>
-    </div>
-    
-  <div class="grid-item">
-      <img src="228_final_rabbit-removebg-preview.png", height= 190px, alt="drawing of rabbit in purple">
-     <p class="captions">
-        (Just a cute<br> bunny here)
-      </p>
-  </div>
-    
-  <div class="grid-item">
-      <img src="228_final_Matcha-removebg-preview.png", height =200 alt="Matcha in a pink mug">
-     <p class="captions">
-        Drink Collection<br>
-        💎200
-      </p>
-  </div>
-  
-  <div class="grid-item">
-      <img src="228_final_star-removebg-preview.png", height= 200 alt="purple embroided star">
-      <p class="captions">
-        Snapshots<br>
-        💎200
-      </p>
-  
-  </div>
-    
-  </div>
-</div>
-  
-  
-   <div id="section1">
-    <h2>
-      Scroll to explore 
-     </h2>
-     
-    <h3>
-      <img src="228_final_ribbon-removebg-preview (1).png", height=130 alt="pink ribbon" style="vertical-align: middle; margin-right: 10px;"> About me 
-     </h3>
-     
-     
-  <video width="100%" height="auto" controls>
-    <source src="pinterest-video-75.mp4" type="video/mp4">
-  </video>
-  
-     <p style="font-size:25px; text-align: left; line-height: 35px;">
-       My name is Kaley. I am 19 years old, currently enrolled in a business and design university program. Although it might not be apparent on this website, my favorite color is purple. I have almost too many hobbies to keep track of. But now i am sharing some of it with you! I hope you have fun exploring.
-     </p>
-</div>
-  
-  
-<div id="section2">
+    .home-page-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      gap: 50px;
+      padding: 60px;
+    }
 
-        <h3>
-          <img src="228 final book_preview.png", height="140" alt="pink striped notebook"  style="vertical-align: middle; margin-right: 10px; transform: rotate(-15deg);"> Books I enjoy
-  </h3>
-       
-  <div class="books-grid">
-  <div class="book-pair">
-    <img src="how to know a person.jpg" alt="How to know a person" class="book-cover">
-    <div class="white-rectangle">
-      The book provided insight into the process of getting to know someone. A process where most people think is intuitive but end up doing it wrong. 
-      <br>
-      This book made me reflect on how I built and kindle my relationships, and made me a better listener and deepen my emotional bond with people around me.
-    </div>
-  </div>
+    .grid-item {
+      text-align: center;
+    }
 
-  <div class="book-pair">
-    <img src="the silent patient.jpg" alt="The Silent Patient" class="book-cover">
-    <div class="white-rectangle">
-      Amazing psychological thriller centered around a psychologist and a patient that refuses to speak.
-    <br>
-      As someone that has read (and predicted) countless ending of thrillers, this one really caught me off guard!!!
-<br>
-      I would recommend this book to people that dont normally read thrillers when they want to get started.
-  </div>
-    </div>
+    .captions {
+      font-family: "Lora";
+      text-align: center;
+    }
 
-  <div class="book-pair">
-    <img src="everything everything.jpg" alt="Everything Everything" class="book-cover">
-    <div class="white-rectangle">
-      The story of a girl that is allergic to the world. She lives in a small plastic shielded house with her mother and nurse. However, one day, a boy moves in next door, and her life changed. <br>
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      justify-items: center;
+    }
 
-    This book was fun to read and easy to follow along.Its a good book to get out of a reading slump!  
-    </div>
-  </div>
+    .book-pair {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+    }
 
-  <div class="book-pair">
-    <div class="white-rectangle">My next read</div>
-    <img src="the wedding people.jpg" alt="The Wedding People" class="book-cover">
-  </div>
-</div>
-  
-<div id="section3">
-<h3>
-  <img src="dango-removebg-preview.png" alt="dango" 
-       style="width: 100px; height: 150px; object-fit: cover; object-position: center; vertical-align: middle"> Baking
-  </h3>
-  </div>
-</div>
-  
-<div id="section4">
-  
-  <div class="rect-grid">
-  <div class="gray-rect">Baking item 1</div>
+    .book-cover {
+      height: 250px;
+      border: none;
+    }
+
+    .white-rectangle {
+      background-color: white;
+      width: 150px;
+      height: 220px;
+      padding: 15px;
+      color: black;
+      display: flex;
+      align-items: center;
+      text-align: left;
+      font-size: 13px;
+    }
+
+    .rect-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 40px;
+      justify-items: center;
+      padding: 10px;
+    }
+
+    .gray-rect {
+      background-color: white;
+      width: 350px;
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .text-box {
+      width: 350px;
+      min-height: 60px;
+      margin-top: 10px;
+      padding: 5px;
+      color: white;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .baking-hero {
+      width: 950px;
+      height: 350px;
+      background-color: white;
+      margin: 30px auto;
+      align-items: center;
+    }
+
+    .drink-circle {
+      background-color: #FFFDD0;
+      width: 230px;
+      height: 225px;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+
+    #section0 img:hover {
+      transform: rotate(-10deg) scale(1.15);
+    }
+
+
+    #section0 {
+      height: 700px;
+      background-color: #8A6554;
+    }
+
+    #section1, #section2, #section3, #section4, #section5, #section6, #section7 {
+      padding: 20px 10px;
+      background-color: #705244;
+      max-height: 1000px;
+    }
+
  
-    
-  <div class="gray-rect">Baking item 2</div>
-    
-  <div class="text-box">
-    My favorite snack to bake!<br>
-    it requires so little effort and ingredients
+    #section6 {
+      background-color: #705244;
+      padding: 40px 0;
+    }
+
+    .photo-grid-outline {
+      display: flex;
+      justify-content: space-between; 
+      max-width: 950px;
+      margin: 0 auto;
+    }
+
+    .photo-column {
+      display: flex;
+      flex-direction: column;
+      gap: 60px; 
+    }
+
+    .photo-outline-box {
+      background-color: #ccc;
+      width: 350px; 
+      height: 200px;
+      border: 2px solid #fff;
+      box-sizing: border-box;
+    }
+
+   
+    .left-column {
+      margin-top: 120px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Welcome to my cozy corner!</h2>
+
+
+  <div id="section0">
+    <div class="home-page-grid">
+      <div class="grid-item">
+        <a href="#section2">
+          <img src="228 final book_preview.png" height="160" alt="pink striped notebook">
+        </a>
+        <p class="captions">Reading<br>💎200</p>
+      </div>
+
+      <div class="grid-item">
+        <a href="#section1">
+          <img src="228_final_ribbon-removebg-preview (1).png" height="180" alt="pink ribbon">
+        </a>
+        <p class="captions">About me<br>💎100</p>
+      </div>
+
+      <div class="grid-item">
+        <a href="#section3">
+          <img src="dango-removebg-preview.png" alt="illustration of dango on a stick" height="180">
+        </a>
+        <p class="captions">Baking<br>💎200</p>
+      </div>
+
+      <div class="grid-item">
+        <img src="228_final_rabbit-removebg-preview.png" height="190" alt="drawing of rabbit in purple">
+        <p class="captions">(Just a cute<br>bunny here)</p>
+      </div>
+
+      <div class="grid-item">
+        <a href="#section5">
+          <img src="228_final_Matcha-removebg-preview.png" height="200" alt="Matcha in a pink mug">
+        </a>
+        <p class="captions">Drink Collection<br>💎200</p>
+      </div>
+
+      <div class="grid-item">
+        <a href="#section6">
+          <img src="228_final_star-removebg-preview.png" height="200" alt="purple embroidered star">
+        </a>
+        <p class="captions">Snapshots<br>💎200</p>
+      </div>
     </div>
-  <div class="text-box">
-    I love everything chewy! 
-    <br>
-    I dont make this often because none of my family likes mochi:(
-    </div>
-</div>
-  
-  <div class="baking-hero">  </div>
-    <p style="font-size: 22px; max-width: 975px; margin: 0 auto; text-align: center;">
-     I am a HUGE bread lover. I can eat bread three times a day. <br>We have a mixer at home so this is relatively easy to make!
-  </p>
-  
-</div>
-  
-  
-  
-<div id="section5">
-  <h3>
-    <img src="228_final_Matcha-removebg-preview.png", height ="150" alt="Matcha in a pink mug" style="vertical-align: middle;">
-    Drink Collection
-  </h3>
-  your amazing content goes here!
   </div>
-  </body>
+
+ 
+  <div id="section1">
+    <h2>Scroll to explore</h2>
+    <h3>
+      <img src="228_final_ribbon-removebg-preview (1).png" height="130" alt="pink ribbon" style="vertical-align: middle; margin-right: 10px;">
+      About me
+    </h3>
+
+    <video controls>
+      <source src="pinterest-video-75.mp4" type="video/mp4">
+    </video>
+
+    <p style="font-size:25px; text-align: left; line-height: 35px;">
+      My name is Kaley. I am 19 years old, currently enrolled in a business and design university program. Although it
+      might not be apparent on this website, my favorite color is purple. I have almost too many hobbies to keep track
+      of. But now I am sharing some of it with you! I hope you have fun exploring.
+    </p>
+  </div>
+
+  <div id="section2">
+    <h3>
+      <img src="228 final book_preview.png" height="140" alt="pink striped notebook"
+        style="vertical-align: middle; margin-right: 10px; transform: rotate(-15deg);">
+      Books I enjoy
+    </h3>
+
+    <div class="books-grid">
+      <div class="book-pair">
+        <img src="how to know a person.jpg" alt="How to know a person" class="book-cover">
+        <div class="white-rectangle">
+          The book provided insight into the process of getting to know someone — a process where most people think it's
+          intuitive but often do it wrong.
+        </div>
+      </div>
+
+      <div class="book-pair">
+        <img src="the silent patient.jpg" alt="The Silent Patient" class="book-cover">
+        <div class="white-rectangle">
+          Amazing psychological thriller centered around a psychologist and a patient that refuses to speak.
+        </div>
+      </div>
+
+      <div class="book-pair">
+        <img src="everything everything.jpg" alt="Everything Everything" class="book-cover">
+        <div class="white-rectangle">
+          Story of a girl allergic to the world who finds love and freedom through risk and connection.
+        </div>
+      </div>
+
+      <div class="book-pair">
+        <div class="white-rectangle">My next read</div>
+        <img src="the wedding people.jpg" alt="The Wedding People" class="book-cover">
+      </div>
+    </div>
+  </div>
+
+ 
+  <div id="section3">
+    <h3>
+      <img src="dango-removebg-preview.png" alt="dango"
+        style="width: 100px; height: 150px; object-fit: cover; object-position: center; vertical-align: middle">
+      Baking
+    </h3>
+  </div>
+
+  <div id="section4">
+    <div class="rect-grid">
+      <div class="gray-rect">Baking item 1</div>
+      <div class="gray-rect">Baking item 2</div>
+
+      <div class="text-box">
+        My favorite snack to bake!<br>It requires so little effort and ingredients.
+      </div>
+
+      <div class="text-box">
+        I love everything chewy!<br>I don’t make this often because none of my family likes mochi :(
+      </div>
+    </div>
+
+    <div class="baking-hero"></div>
+    <p style="font-size: 22px; max-width: 975px; margin: 0 auto; text-align: center;">
+      I am a HUGE bread lover. I can eat bread three times a day.<br>We have a mixer at home so this is relatively easy to make!
+    </p>
+  </div>
+
+
+  <div id="section5">
+    <h3>
+      <img src="228_final_Matcha-removebg-preview.png" height="150" alt="Matcha in a pink mug" style="vertical-align: middle;">
+      Drink Collection
+    </h3>
+
+    <div class="home-page-grid">
+      <div class="drink-item">
+        <div class="drink-circle"></div>
+        <p class="drink caption">Matcha Latte</p>
+      </div>
+
+      <div class="drink-item">
+        <div class="drink-circle"></div>
+        <p class="drink caption">Biscoff Ice Capp</p>
+      </div>
+
+      <div class="drink-item">
+        <div class="drink-circle"></div>
+        <p class="drink caption">Matcha Latte</p>
+      </div>
+    </div>
+
+    <div class="home-page-grid">
+      <div class="drink-item">
+        <div class="drink-circle"></div>
+        <p class="drink caption">Matcha Latte</p>
+      </div>
+
+      <div class="drink-item">
+        <div class="drink-circle"></div>
+        <p class="drink caption">Matha Latte</p>
+      </div>
+
+      <div class="drink-item">
+        <div class="drink-circle"></div>
+        <p class="drink caption">Matcha Latte</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="section6">
+    <h3>
+      <img src="228_final_star-removebg-preview.png" height="170" width="150" alt="purple embroidered star"
+        style="vertical-align: middle; margin-right: -15px;">
+      Photography
+    </h3>
+
+    <div class="photo-grid-outline">
+      <div class="photo-column left-column">
+        <div class="photo-outline-box"></div>
+        <div class="photo-outline-box"></div>
+        <div class="photo-outline-box"></div>
+      </div>
+
+      <div class="photo-column right-column">
+        <div class="photo-outline-box"></div>
+        <div class="photo-outline-box"></div>
+        <div class="photo-outline-box"></div>
+      </div>
+    </div>
+    
+    
+    <div class="section7">
+      
+    </div>
+    
+    
+  </div>
+</body>
 </html>
