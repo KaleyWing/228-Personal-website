@@ -137,12 +137,21 @@
     }
 
     .drink-circle {
-      background-color: #FFFDD0;
-      width: 230px;
-      height: 225px;
-      border-radius: 50%;
-      margin: 0 auto;
-    }
+  width: 230px;
+  height: 225px;
+  border-radius: 50%;
+  overflow: hidden;          
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drink-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;           
+}
 
     #section0 img:hover {
       transform: rotate(-10deg) scale(1.15);
@@ -159,12 +168,12 @@
       background-color: #705244;
       max-height: 1000px;
     }
-
- 
-    #section6 {
-      background-color: #705244;
-      padding: 40px 0;
+    
+    
+    #section7 {
+      background: linear-gradient(to top, #91a981 10%, #705244 80%);
     }
+ 
 
     .photo-grid-outline {
       display: flex;
@@ -191,13 +200,63 @@
     .left-column {
       margin-top: 120px;
     }
+    
+    
+.music-player {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#music-btn {
+  background-color: #705244;
+  color: white;
+  font-family: "Lora", serif;
+  border-radius: 12px;
+  padding: 12px 25px;
+  font-size: 20px;
+}
+
+#music-btn:hover {
+  background-color: #8A6554;
+  transform: scale(1.05);
+}
+    
+    
   </style>
 </head>
+  
 
 <body>
+ <div style="padding-top:40px; text-align:center;">
+  <img src="K.png" height="150" alt="K in Kaley">
+  <img src="a.png" height="120" alt="a in Kaley">
+  <img src="l.png" height="150" alt="l in Kaley">
+  <img src="e.png" height="130" alt="e in Kaley">
+  <img src="y).png" height="150" alt="y in Kaley">
+</div>
   <h2>Welcome to my cozy corner!</h2>
 
+<!-- 🎶 Music Button -->
+<div class="music-player">
+  <button id="music-btn">🎵 Play Music</button>
+  <audio id="bg-music" src="₊˚⊹ SILLY with a cherry on top 🍓 _ bossa nova playlist ₊⊹.mp3"></audio>
+</div>
+  
+<script>
+  const button = document.getElementById("music-btn");
+  const music = document.getElementById("bg-music");
 
+  button.onclick = function() {
+    if (music.paused) {
+      music.play();
+      button.innerText = "⏸ Pause Music";
+    } else {
+      music.pause();
+      button.innerText = "🎵 Play Music";
+    }
+  };
+</script>
+  
   <div id="section0">
     <div class="home-page-grid">
       <div class="grid-item">
@@ -331,41 +390,53 @@
   <div id="section5">
     <h3>
       <img src="228_final_Matcha-removebg-preview.png" height="150" alt="Matcha in a pink mug" style="vertical-align: middle;">
-      Drink Collection
+      Matcha Collection
     </h3>
 
     <div class="home-page-grid">
       <div class="drink-item">
-        <div class="drink-circle"></div>
-        <p class="drink caption">Matcha Latte</p>
+        <div class="drink-circle">
+          <img src="CrosCrois_matcha.JPG" alt="coffee culture ice matcha picture">
+          </div>
+        <p class="drink caption">Matcha Latte <br>from cros Croissanterie</p>
       </div>
 
       <div class="drink-item">
-        <div class="drink-circle"></div>
-        <p class="drink caption">Biscoff Ice Capp</p>
+        <div class="drink-circle">
+        <img src="Coffeeculture_matcha.JPG" alt="coffee culture ice matcha picture">
+          </div>
+        <p class="drink caption">Ice Matcha latte <br> from Coffee Culture</p>
       </div>
 
       <div class="drink-item">
-        <div class="drink-circle"></div>
-        <p class="drink caption">Matcha Latte</p>
+        <div class="drink-circle">
+        <img src="montrealbagel_match.png" alt="montreal bagel shop ice matcha">
+        </div>
+        <p class="drink caption">Matcha latte <br> from montreal La fabrique de Bagel</p>
       </div>
     </div>
 
     <div class="home-page-grid">
       <div class="drink-item">
-        <div class="drink-circle"></div>
-        <p class="drink caption">Matcha Latte</p>
+        <div class="drink-circle">
+        <img src="FullSizeRender.jpeg" alt="funken cafe matcha photo"></div>
+        <p class="drink caption">Matcha Latte <br> from Funken cafe (uwaterloo)</p>
       </div>
 
       <div class="drink-item">
-        <div class="drink-circle"></div>
-        <p class="drink caption">Matha Latte</p>
+        <div class="drink-circle">
+        <img src="Matchyogurt_toyko.JPG" alt="matcha yogurt from Toyko Japan picture">
+        </div>
+        <p class="drink caption">Matcha yogurt <br> from Toyko Japan</p>
       </div>
 
-      <div class="drink-item">
-        <div class="drink-circle"></div>
-        <p class="drink caption">Matcha Latte</p>
+     <div class="drink-item">
+        <div class="drink-circle">
+        <img src="bingsucafe_matcha.png" alt="Strawberry Matcha from Bingsu Café">
       </div>
+        <p class="drink caption">Strawberry Matcha <br>from Bingsu Café</p>
+    </div>
+      
     </div>
   </div>
 
@@ -391,11 +462,15 @@
     </div>
     
     
-    <div class="section7">
-      
+  <div id="section7">
+  <div class="footer-content">
+    <img src="228_final_rabbit-removebg-preview.png" alt="purple bunny" class="footer-bunny" height="180">
+
+    <p class="footer-text">
+      Thank you for staying till the end!
+    </p>
     </div>
-    
-    
+    </div>
   </div>
 </body>
 </html>
