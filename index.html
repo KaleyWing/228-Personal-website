@@ -109,14 +109,15 @@
     }
 
     .gray-rect {
-      background-color: white;
-      width: 350px;
-      height: 220px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-    }
+    background-color: white;
+    width: 350px;
+    height: 220px;
+    overflow: hidden;          
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
     .text-box {
       width: 350px;
@@ -128,19 +129,42 @@
       text-align: center;
     }
 
-    .baking-hero {
-      width: 950px;
-      height: 350px;
-      background-color: white;
-      margin: 30px auto;
-      align-items: center;
-    }
+ .baking-hero {
+  width: 850px;
+  height: 350px;
+  background-color: white;
+  margin: 30px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .drink-circle {
+.baking-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center;
+  display: block;
+}
+
+
+.gray-rect .baking-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     
+  object-position: center;     
+  border-radius: 8px;
+}
+
+     
+.drink-circle {
+  position: relative;
   width: 230px;
   height: 225px;
   border-radius: 50%;
-  overflow: hidden;          
+  overflow: hidden;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -150,13 +174,42 @@
 .drink-circle img {
   width: 100%;
   height: 100%;
-  object-fit: cover;           
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+}
+
+
+.drink-circle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0); 
+  transition: background 0.4s ease;
+}
+
+
+.drink-circle::after {
+  content: attr(data-hover); 
+  position: absolute;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  opacity: 0;           
+  transition: opacity 0.4s ease;
+  text-align: center;
+}
+
+.drink-circle:hover::before {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.drink-circle:hover::after {
+  opacity: 1;
 }
 
     #section0 img:hover {
       transform: rotate(-10deg) scale(1.15);
     }
-
 
     #section0 {
       height: 700px;
@@ -220,6 +273,16 @@
   background-color: #8A6554;
   transform: scale(1.05);
 }
+    
+    .subtext {
+  font-family: serif;
+  font-size: 18px;
+  color: #f5f5f5;       
+  text-align: right;    
+  margin: -90px 12px 20px 0; 
+  letter-spacing: 0.5px;
+}
+
     
     
   </style>
@@ -331,22 +394,21 @@
       <div class="book-pair">
         <img src="how to know a person.jpg" alt="How to know a person" class="book-cover">
         <div class="white-rectangle">
-          The book provided insight into the process of getting to know someone — a process where most people think it's
-          intuitive but often do it wrong.
+          The book provided insight into the process of getting to know someone..a process where most people think it's intuitive. This book made me reflect on how I built and kindle my relationships, and made me a better listener.
         </div>
       </div>
 
       <div class="book-pair">
         <img src="the silent patient.jpg" alt="The Silent Patient" class="book-cover">
         <div class="white-rectangle">
-          Amazing psychological thriller centered around a psychologist and a patient that refuses to speak.
+          Amazing psychological thriller centered around a psychologist and a patient that refuses to speak. The plot twist is mindblowing as the truth slowly unveil.
         </div>
       </div>
 
       <div class="book-pair">
         <img src="everything everything.jpg" alt="Everything Everything" class="book-cover">
         <div class="white-rectangle">
-          Story of a girl allergic to the world who finds love and freedom through risk and connection.
+          Story of a girl allergic to the world, and how her world changed when a boy named Olly moved in next door. Cheesy but wholesome read.
         </div>
       </div>
 
@@ -366,21 +428,29 @@
     </h3>
   </div>
 
-  <div id="section4">
-    <div class="rect-grid">
-      <div class="gray-rect">Baking item 1</div>
-      <div class="gray-rect">Baking item 2</div>
+ <div id="section4">
+  <div class="rect-grid">
+    <div class="gray-rect">
+      <img src="Crepe cake.jpeg" alt="Crepe Cake" class="baking-img">
+    </div>
+    
+      <div class="gray-rect">
+      <img src="Trad_hkpastry.jpeg" alt="twisted bread" class="baking-img">
+    </div>
 
       <div class="text-box">
-        My favorite snack to bake!<br>It requires so little effort and ingredients.
+        My favorite type of cake: Crepe cake! It requires so little steps and ingredients. It might not look that good but it tastes amazing!!!
       </div>
 
       <div class="text-box">
-        I love everything chewy!<br>I don’t make this often because none of my family likes mochi :(
+        My fav type of bread: Raisin twist bread. It is a traditional Hong kong snack! The glaze you see on the top is honey :D
       </div>
     </div>
 
-    <div class="baking-hero"></div>
+   
+    <div class="baking-hero">
+   <img src="bread collage.png" alt="bread collage">
+   </div>
     <p style="font-size: 22px; max-width: 975px; margin: 0 auto; text-align: center;">
       I am a HUGE bread lover. I can eat bread three times a day.<br>We have a mixer at home so this is relatively easy to make!
     </p>
@@ -392,24 +462,26 @@
       <img src="228_final_Matcha-removebg-preview.png" height="150" alt="Matcha in a pink mug" style="vertical-align: middle;">
       Matcha Collection
     </h3>
+    <p class="subtext">hover for ratings!</p>
+    
 
     <div class="home-page-grid">
       <div class="drink-item">
-        <div class="drink-circle">
+        <div class="drink-circle" data-hover="⭐ 5">
           <img src="CrosCrois_matcha.JPG" alt="coffee culture ice matcha picture">
           </div>
         <p class="drink caption">Matcha Latte <br>from cros Croissanterie</p>
       </div>
 
       <div class="drink-item">
-        <div class="drink-circle">
+        <div class="drink-circle" data-hover="⭐ 3.5">
         <img src="Coffeeculture_matcha.JPG" alt="coffee culture ice matcha picture">
           </div>
         <p class="drink caption">Ice Matcha latte <br> from Coffee Culture</p>
       </div>
 
       <div class="drink-item">
-        <div class="drink-circle">
+        <div class="drink-circle" data-hover="⭐ 4">
         <img src="montrealbagel_match.png" alt="montreal bagel shop ice matcha">
         </div>
         <p class="drink caption">Matcha latte <br> from montreal La fabrique de Bagel</p>
@@ -418,20 +490,20 @@
 
     <div class="home-page-grid">
       <div class="drink-item">
-        <div class="drink-circle">
+        <div class="drink-circle" data-hover="⭐ 4.3">
         <img src="FullSizeRender.jpeg" alt="funken cafe matcha photo"></div>
         <p class="drink caption">Matcha Latte <br> from Funken cafe (uwaterloo)</p>
       </div>
 
       <div class="drink-item">
-        <div class="drink-circle">
+        <div class="drink-circle" data-hover="⭐ 4.8">
         <img src="Matchyogurt_toyko.JPG" alt="matcha yogurt from Toyko Japan picture">
         </div>
         <p class="drink caption">Matcha yogurt <br> from Toyko Japan</p>
       </div>
 
      <div class="drink-item">
-        <div class="drink-circle">
+        <div class="drink-circle" data-hover="⭐ 4.6">
         <img src="bingsucafe_matcha.png" alt="Strawberry Matcha from Bingsu Café">
       </div>
         <p class="drink caption">Strawberry Matcha <br>from Bingsu Café</p>
