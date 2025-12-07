@@ -12,7 +12,7 @@
       width: 1440px; }
 
     body {
-      background-color: #8A6554;
+      background: linear-gradient(135deg, #8A6554 0%, #705244 50%, #8A6554 100%);
       text-align: center;
       margin: 0 auto;
       color: white;
@@ -207,23 +207,17 @@
   opacity: 1;
 }
 
-  
 
     #section0 {
       height: 700px;
-      background-color: #8A6554;
     }
 
-    #section1, #section2, #section3, #section4, #section5, #section6, #section7 {
+    #section1, #section2, #section3, #section4, #section5, #section6, #section7{
       padding: 20px 10px;
-      background-color: #705244;
       max-height: 1000px;
     }
     
-    
-    #section7 {
-      background: linear-gradient(to top, #91a981 10%, #705244 80%);
-    }
+  
  
 
     .photo-grid-outline {
@@ -240,10 +234,9 @@
     }
 
     .photo-outline-box {
-      background-color: #ccc;
+      background-color: black;
       width: 350px; 
       height: 200px;
-      border: 2px solid #fff;
       box-sizing: border-box;
     }
 
@@ -268,7 +261,7 @@
 }
 
 #music-btn:hover {
-  background-color: #8A6554;
+  background-color: #f6b7c2;
   transform: scale(1.05);
 }
     
@@ -281,7 +274,7 @@
   letter-spacing: 0.5px;
 }
 
-    /* ---------- PHOTO CAROUSEL STYLING ---------- */
+  
 .photo-carousel {
   position: relative;
   max-width: 950px;
@@ -291,19 +284,29 @@
   justify-content: center;
   gap: 15px;
 }
+    
+    .arrow-down {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 12px solid white;
+}
 
 .carousel-frame {
   width: 700px;
   height: 400px;
   background-color: #ccc;
-  border: 3px solid #fff;
-  border-radius: 12px;
+  border: 4px solid black;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
+    
 .carousel-frame img {
   width: 100%;
   height: 100%;
@@ -312,13 +315,13 @@
 }
 
 .arrow {
-  background: rgba(255, 255, 255, 0.8);
+  background: black;
   border: none;
   border-radius: 50%;
   width: 40px;
   height: 40px;
   font-size: 24px;
-  color: #705244;
+  color: white;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
 }
@@ -420,7 +423,12 @@
 
  
   <div id="section1">
-    <h2>Scroll to explore</h2>
+    
+   <h2 class="scroll-text">
+  Scroll to explore
+  <span class="arrow-down"></span>
+</h2>
+    
     <h3>
       <img src="228_final_ribbon-removebg-preview (1).png" height="130" alt="pink ribbon" style="vertical-align: middle; margin-right: 10px;">
       About me
@@ -585,19 +593,10 @@
   </div>
 </div>
     
-    
-  <div id="section7">
-  <div class="footer-content">
-    <img src="228_final_rabbit-removebg-preview.png" alt="purple bunny" class="footer-bunny" height="180">
-
-    <p class="footer-text">
-      Thank you for staying till the end!
-    </p>
-    </div>
-    </div>
+ 
   
 <script>
-  const photos = ["99402c69-f170-4b80-a50f-e212bc196eec.jpg", "Product.JPG", "Low exposure.JPG", "Macro.JPG"];
+  const photos = ["99402c69-f170-4b80-a50f-e212bc196eec.jpg", "Product.JPG", "Low exposure.JPG", "Macro.JPG", "Fashion.JPG", "DSC05060.JPG", "Narration.JPG"];
   let i = 0;
   const img = document.getElementById("carousel-photo");
 
@@ -619,6 +618,18 @@
     }, 300);
   }
 </script>
+  
+  <div id="section7">
+
+    <img src="228_final_rabbit-removebg-preview.png" alt="purple bunny"
+         class="footer-bunny" height="180">
+
+    <p class="footer-text">Thank you for staying till the end!</p>
+
+    <div class="flower-row">
+      🌼 🪻 🌻 🌷 🌸  🌼 🪻 🌻 🌷 🌸  🌼 🪻 🌻 🌷 🌸  🌼 🪻 🌻 🌷 🌸  🌼 🪻 🌻 🌷 🌸  🌼 🪻 🌻 🌷 🌸  🌼 🪻 🌻 🌷 🌸  🌼 🪻 🌻 🌷 🌸  🌼 🪻 🌻 🌷 🌸  🌼 🪻 🌻 🌷 🌸
+    </div>
+  </div>
   
 </body>
 </html>
