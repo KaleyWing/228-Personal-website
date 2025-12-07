@@ -207,9 +207,7 @@
   opacity: 1;
 }
 
-    #section0 img:hover {
-      transform: rotate(-10deg) scale(1.15);
-    }
+  
 
     #section0 {
       height: 700px;
@@ -283,8 +281,64 @@
   letter-spacing: 0.5px;
 }
 
+    /* ---------- PHOTO CAROUSEL STYLING ---------- */
+.photo-carousel {
+  position: relative;
+  max-width: 950px;
+  margin: 40px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.carousel-frame {
+  width: 700px;
+  height: 400px;
+  background-color: #ccc;
+  border: 3px solid #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+.arrow {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  color: #705244;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.arrow:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.05);
+}
+
+.arrow.left {
+  order: 0;
+}
+
+.arrow.right {
+  order: 2;
+}
     
-    
+  #section0 img:hover {
+      transform: rotate(-10deg) scale(1.15);
+    }
   </style>
 </head>
   
@@ -512,26 +566,24 @@
     </div>
   </div>
 
-  <div id="section6">
-    <h3>
-      <img src="228_final_star-removebg-preview.png" height="170" width="150" alt="purple embroidered star"
-        style="vertical-align: middle; margin-right: -15px;">
-      Photography
-    </h3>
 
-    <div class="photo-grid-outline">
-      <div class="photo-column left-column">
-        <div class="photo-outline-box"></div>
-        <div class="photo-outline-box"></div>
-        <div class="photo-outline-box"></div>
-      </div>
+   <div id="section6">
+  <h3>
+    <img src="228_final_star-removebg-preview.png" height="130" 
+         alt="purple embroidered star" style="vertical-align: middle; margin-right: -15px;">
+    Photography
+  </h3>
 
-      <div class="photo-column right-column">
-        <div class="photo-outline-box"></div>
-        <div class="photo-outline-box"></div>
-        <div class="photo-outline-box"></div>
-      </div>
+  <div class="photo-carousel">
+    <button class="arrow left" id="prev-photo">❮</button>
+    
+    <div class="carousel-frame">
+      <img id="carousel-photo" src="99402c69-f170-4b80-a50f-e212bc196eec.jpg" height="130" alt="Photography image">
     </div>
+
+    <button class="arrow right" id="next-photo">❯</button>
+  </div>
+</div>
     
     
   <div id="section7">
@@ -543,6 +595,30 @@
     </p>
     </div>
     </div>
-  </div>
+  
+<script>
+  const photos = ["99402c69-f170-4b80-a50f-e212bc196eec.jpg", "Product.JPG", "Low exposure.JPG", "Macro.JPG"];
+  let i = 0;
+  const img = document.getElementById("carousel-photo");
+
+  document.getElementById("next-photo").onclick = () => {
+    i = (i + 1) % photos.length;
+    changePhoto();
+  };
+
+  document.getElementById("prev-photo").onclick = () => {
+    i = (i - 1 + photos.length) % photos.length;
+    changePhoto();
+  };
+
+  function changePhoto() {
+    img.style.opacity = 0;
+    setTimeout(() => {
+      img.src = photos[i];
+      img.style.opacity = 1;
+    }, 300);
+  }
+</script>
+  
 </body>
 </html>
