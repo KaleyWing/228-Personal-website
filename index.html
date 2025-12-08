@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
   <title>My Cozy Corner</title>
+  
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+ 
 
   <style>
     html {
@@ -16,7 +21,7 @@
       text-align: center;
       margin: 0 auto;
       color: white;
-      font-family: "Kantumruy Pro", serif;
+      font-family: "Google Sans Flex", serif;
       width: 1200px;
     }
 
@@ -130,23 +135,21 @@
     }
 
  .baking-hero {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden; 
   width: 850px;
   height: 350px;
-  background-color: white;
   margin: 30px auto;
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .baking-hero img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
   object-position: center;
   display: block;
+  border-radius: 0;
 }
 
 
@@ -216,8 +219,6 @@
       padding: 20px 10px;
       max-height: 1000px;
     }
-    
-  
  
 
     .photo-grid-outline {
@@ -270,7 +271,7 @@
   font-size: 18px;
   color: #f5f5f5;       
   text-align: right;    
-  margin: -90px 12px 20px 0; 
+  margin: -80px 12px 20px 0; 
   letter-spacing: 0.5px;
 }
 
@@ -447,36 +448,50 @@
 
   <div id="section2">
     <h3>
-      <img src="228 final book_preview.png" height="140" alt="pink striped notebook"
+      <img src="228 final book_preview.png" height="120" alt="pink striped notebook"
         style="vertical-align: middle; margin-right: 10px; transform: rotate(-15deg);">
       Books I enjoy
     </h3>
+    <br>
+     <p class="subtext">click on the books!</p>
 
     <div class="books-grid">
       <div class="book-pair">
+         <a href="https://www.goodreads.com/book/show/112974860-how-to-know-a-person?from_search=true&from_srp=true&qid=Z4Y75D8mc7&rank=1" target="_blank">
         <img src="how to know a person.jpg" alt="How to know a person" class="book-cover">
+        </a>
         <div class="white-rectangle">
           The book provided insight into the process of getting to know someone..a process where most people think it's intuitive. This book made me reflect on how I built and kindle my relationships, and made me a better listener.
         </div>
       </div>
 
       <div class="book-pair">
-        <img src="the silent patient.jpg" alt="The Silent Patient" class="book-cover">
-        <div class="white-rectangle">
-          Amazing psychological thriller centered around a psychologist and a patient that refuses to speak. The plot twist is mindblowing as the truth slowly unveil.
-        </div>
-      </div>
+  <a href="https://www.goodreads.com/book/show/40097951-the-silent-patient" target="_blank">
+    <img src="the silent patient.jpg" alt="The Silent Patient" class="book-cover">
+  </a>
+
+  <div class="white-rectangle">
+    Amazing psychological thriller centered around a psychologist and a patient that refuses to speak. 
+    The plot twist is mind‑blowing as the truth slowly unveils.
+  </div>
+</div>
 
       <div class="book-pair">
+        <a href="https://www.goodreads.com/book/show/18692431-everything-everything?from_search=true&from_srp=true&qid=yxuhOQC6eV&rank=1" target="_blank">
         <img src="everything everything.jpg" alt="Everything Everything" class="book-cover">
+        </a>
+        
         <div class="white-rectangle">
           Story of a girl allergic to the world, and how her world changed when a boy named Olly moved in next door. Cheesy but wholesome read.
         </div>
       </div>
 
       <div class="book-pair">
-        <div class="white-rectangle">My next read</div>
+         <a href="https://www.goodreads.com/book/show/198902277-the-wedding-people?ref=nav_sb_ss_1_18" target="_blank">
         <img src="the wedding people.jpg" alt="The Wedding People" class="book-cover">
+        </a>
+        
+         <div class="white-rectangle">My next read</div>
       </div>
     </div>
   </div>
@@ -488,16 +503,21 @@
         style="width: 100px; height: 150px; object-fit: cover; object-position: center; vertical-align: middle">
       Baking
     </h3>
+    <p class="subtext">click on pictures <br>to learn more!</p>
   </div>
 
  <div id="section4">
   <div class="rect-grid">
     <div class="gray-rect">
+      <a href="https://flouringkitchen.com/mango-crepe-cake-with-easy-homemade-crepes/#%f0%9f%93%96-recipe" target="_blank">
       <img src="Crepe cake.jpeg" alt="Crepe Cake" class="baking-img">
+      </a>
     </div>
     
       <div class="gray-rect">
+        <a href="https://www.ubereats.com/ca/store/kin-kin-bakery-%26-bubble-tea-yonge-sheppard-centre/B7n7QiT3RRGjUWrGGFLMQQ/08b72308-f0d4-4d47-8ad1-29846e49bf33/98f57649-0868-4e4a-8cef-d4525b41d670/4204b47f-16e1-4757-bb3f-7e0afc1bab1b" target="_blank">
       <img src="Trad_hkpastry.jpeg" alt="twisted bread" class="baking-img">
+     </a>
     </div>
 
       <div class="text-box">
@@ -511,7 +531,9 @@
 
    
     <div class="baking-hero">
-   <img src="bread collage.png" alt="bread collage">
+      <a href="https://www.washingtonpost.com/graphics/2020/voraciously/10-best-breads-in-the-world/" target="_blank">
+   <img src="Untitled design (4).png" alt="bread collage">
+        </a>
    </div>
     <p style="font-size: 22px; max-width: 975px; margin: 0 auto; text-align: center;">
       I am a HUGE bread lover. I can eat bread three times a day.<br>We have a mixer at home so this is relatively easy to make!
@@ -624,12 +646,26 @@
     <img src="228_final_rabbit-removebg-preview.png" alt="purple bunny"
          class="footer-bunny" height="180">
 
-    <p class="footer-text">Thank you for staying till the end!</p>
+    <p class="footer-text">Thank you for staying till the end! <br>Click on the cute bunny!</p>
 
     <div class="flower-row">
       🌼 🪻 🌻 🌷 🌸  🌼 🪻 🌻 🌷 🌸  🌼 🪻 🌻 🌷 🌸  🌼 🪻 🌻 🌷 🌸  🌼 🪻 🌻 🌷 🌸  🌼 🪻 🌻 🌷 🌸  🌼 🪻 🌻 🌷 🌸  🌼 🪻 🌻 🌷 🌸  🌼 🪻 🌻 🌷 🌸  🌼 🪻 🌻 🌷 🌸
     </div>
   </div>
+  <script>
+  const bunny = document.querySelector('.footer-bunny');
+
+  bunny.addEventListener('click', () => {
+    confetti({
+      particleCount: 100,             // how many pieces appear
+      spread: 80,                     // how wide they scatter
+      origin: { y: 0.6 },             // starts near the bunny
+      colors: ['#f6b7c2','#fbe8a6','#c9e4de','#b5ead7','#ffdac1']
+    });
+  });
+</script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
   
 </body>
 </html>
